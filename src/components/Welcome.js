@@ -2,11 +2,15 @@
 import Logo from "../the-simpson.png";
 import styled from 'styled-components';
 
-export default function Welcome(params) {
+export default function Welcome(props) {
+
+  const {reqApi}= props;
+
+
     return (
         <ContentLogo>
             <WelcomeText>pincha sobre la imagen para hacer uso </WelcomeText>
-            <ImagenLogo src={Logo} alt="Simpson Logo" />
+            <ImagenLogo src={Logo} alt="Simpson Logo" onClick={reqApi } />
         </ContentLogo>
     );
 };
