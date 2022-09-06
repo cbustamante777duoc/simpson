@@ -11,7 +11,7 @@ function App() {
   const [chracters, setChracters] = useState(null);
 
   const reqApi = async () => {
-    const api = await fetch('https://simpsons-quotes-api.herokuapp.com/quotes?count=3');
+    const api = await fetch('https://simpsons-quotes-api.herokuapp.com/quotes?count=4');
     const frases = await api.json();
     setChracters(frases);
   }
